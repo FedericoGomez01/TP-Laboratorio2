@@ -47,16 +47,11 @@ namespace Entidades
         {
             int aux =0;
             bool rtn;
-            foreach (char i in binario)
+            foreach (char numero in binario)
             {
-                switch (binario)
+                if(numero != '1' && numero != '0')
                 {
-                    case "1":
-                    case "0":
-                        break;
-                    default:
-                        aux++;
-                        break;
+                    aux++;
                 }
 
             }
@@ -73,38 +68,96 @@ namespace Entidades
 
         public string BinarioDecimal(string binario)
         {
-            int aux =0;
+            string retorno = string.Empty;
+            double aux=0;
+            int auxIndice = binario.Length - 1;
             if (EsBinario(binario))
             {
                 foreach (char valor in binario)
                 {
-                    int auxIndice = binario.Length;
-                    if (valor == 1)
+
+                    if (valor == '1')
                     {
-                        aux = aux + (valor * (int)Math.Pow(2, auxIndice));
+                        aux += Math.Pow(2, auxIndice);
                     }
                     auxIndice--;
                 }
+                retorno = aux.ToString();
             }
-            return aux.ToString();
+            else
+            {
+                retorno = "Valor invalido";
+            }
+            return retorno;
         }
 
-        public string BinarioDecimal(double numero)
+        public string DecimalBinario(double numero)
         {
-            int aux = 0;
-
-            while(numero > 1)
+            int resto;
+            int resultadoDiv = (int)numero;
+            string retorno = string.Empty;
+            if(numero< 65536 )
             {
-                if (numero % 2 == 0 || numero % 2 == 1)
+                if (numero >= 0 && !(EsBinario(numero.ToString())))
                 {
-                    aux = aux + ((int)numero % 2);
-                    numero = numero / 2;
+                    while (resultadoDiv > 0)
+                    {
+                        resto = (resultadoDiv % 2);
+                        resultadoDiv = resultadoDiv / 2;
+                        retorno = resto.ToString() + retorno;
+                    }
+
+                }
+                else
+                {
+                    retorno = "Valor invalido";
                 }
             }
+            else
+            {
+                retorno = "Exceso Bits";
+            }
+            return retorno;
         }
-        public string BinarioDecimal(string numero)
+        public string DecimalBinario(string numero)
         {
+            double numeroAuxiliar;
+            double.TryParse(numero,out  numeroAuxiliar);
+            string retorno = "Valor invalido";
+            if(DecimalBinario(numeroAuxiliar) != retorno)
+            {
+                retorno = DecimalBinario(numeroAuxiliar);
+            }
 
+            return retorno;
+        }
+
+        public static double operator -(Operando n1, Operando n2)
+        {
+            return n1.numero - n2.numero;
+        }
+
+        public static double operator *(Operando n1, Operando n2)
+        {
+            return n1.numero * n2.numero;
+        }
+        public static double operator /(Operando n1, Operando n2)
+        {
+            double retorno;
+            if(n2.numero==0)
+            {
+                retorno = double.MinValue;
+            }
+            else
+            {
+                retorno = n1.numero / n2.numero;
+            }
+
+            return retorno;
+        }
+        public static double operator +(Operando n1, Operando n2)
+        {
+            return n1.numero + n2.numero;
         }
     }
 }
