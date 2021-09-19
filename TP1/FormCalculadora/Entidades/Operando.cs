@@ -10,19 +10,36 @@ namespace Entidades
     {
         private double numero;
 
+        /// <summary>
+        /// Asigna el valor 0 a la instancia numero
+        /// </summary>
         public Operando()
         {
             this.numero = 0;
         }
 
+        /// <summary>
+        /// Asigna el string pasado en una instancia de tipo double 
+        /// </summary>
+        /// <param name="strNumero"></param>
         public Operando(string strNumero)
         {
             this.Numero = strNumero;
         }
+
+        /// <summary>
+        /// Asigna el numero pasado por parametro a la instancia 
+        /// </summary>
+        /// <param name="numero"></param>
         public Operando(double numero):this(numero.ToString())
         {
         }
 
+        /// <summary>
+        /// Retorna el string pasado en un tipo double, de no ser posible retorna 0.
+        /// </summary>
+        /// <param name="strNumero"></param>
+        /// <returns></returns>
         private double ValidarOperando(string strNumero)
         {
             double aux;
@@ -35,6 +52,10 @@ namespace Entidades
 
             return aux;
         }
+
+        /// <summary>
+        /// Asigna el string como tipo double a la instancia, sino es posible, asigna 0 
+        /// </summary>
         private string Numero
         {
             set
@@ -43,6 +64,11 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Valida que el string recibido como parametro sea un numero binario, de ser asi retorna true, sino false
+        /// </summary>
+        /// <param name="binario"></param>
+        /// <returns></returns>
         private bool EsBinario(string binario)
         {
             int aux =0;
@@ -66,6 +92,12 @@ namespace Entidades
             return rtn;
         }
 
+        /// <summary>
+        /// Retorna un string decimal del numero binario pasado por parametro como tipo string.
+        /// De no ser posible retorna "Valor invalido"
+        /// </summary>
+        /// <param name="binario"></param>
+        /// <returns></returns>
         public string BinarioDecimal(string binario)
         {
             string retorno = string.Empty;
@@ -91,6 +123,12 @@ namespace Entidades
             return retorno;
         }
 
+        /// <summary>
+        /// Retorna un string binario del numero decimal pasado por parametro como tipo double.
+        /// De no ser posible retorna "Valor invalido"
+        /// </summary>
+        /// <param name="binario"></param>
+        /// <returns></returns>
         public string DecimalBinario(double numero)
         {
             int resto;
@@ -119,6 +157,13 @@ namespace Entidades
             }
             return retorno;
         }
+
+        /// <summary>
+        /// Retorna un string binario del numero decimal pasado por parametro como tipo string.
+        /// De no ser posible retorna "Valor invalido"
+        /// </summary>
+        /// <param name="binario"></param>
+        /// <returns></returns>
         public string DecimalBinario(string numero)
         {
             double numeroAuxiliar;
@@ -132,15 +177,33 @@ namespace Entidades
             return retorno;
         }
 
+        /// <summary>
+        /// Realiza la resta de los Operando pasdos por parametros
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns></returns>
         public static double operator -(Operando n1, Operando n2)
         {
             return n1.numero - n2.numero;
         }
-
+        /// <summary>
+        /// Realiza la multiplicacion de los Operando pasdos por parametros
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns></returns>
         public static double operator *(Operando n1, Operando n2)
         {
             return n1.numero * n2.numero;
         }
+
+        /// <summary>
+        /// Realiza la division de los Operando pasdos por parametros
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns></returns>
         public static double operator /(Operando n1, Operando n2)
         {
             double retorno;
@@ -155,6 +218,13 @@ namespace Entidades
 
             return retorno;
         }
+
+        /// <summary>
+        /// Realiza la suma de los Operando pasdos por parametros
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns></returns>
         public static double operator +(Operando n1, Operando n2)
         {
             return n1.numero + n2.numero;
