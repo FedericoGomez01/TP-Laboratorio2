@@ -43,13 +43,7 @@ namespace Entidades
         private double ValidarOperando(string strNumero)
         {
             double aux;
-            if (double.TryParse(strNumero, out aux))
-            { }
-            else
-            {
-                aux = 0;
-            }
-
+            double.TryParse(strNumero, out aux);
             return aux;
         }
 

@@ -84,9 +84,6 @@ namespace Entidades
                     case ETipo.Todos:
                         sb.AppendLine(v.Mostrar());
                         break;
-                        //default:
-                        //   sb.AppendLine(v.Mostrar());
-                        //   break;
                 }
             }
 
