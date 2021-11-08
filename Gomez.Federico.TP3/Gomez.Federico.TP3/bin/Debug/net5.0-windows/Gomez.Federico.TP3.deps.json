@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Gomez.Federico.TP3/1.0.0": {
+        "dependencies": {
+          "Entidades.TP3": "1.0.0"
+        },
+        "runtime": {
+          "Gomez.Federico.TP3.dll": {}
+        }
+      },
+      "Entidades.TP3/1.0.0": {
+        "runtime": {
+          "Entidades.TP3.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Gomez.Federico.TP3/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Entidades.TP3/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

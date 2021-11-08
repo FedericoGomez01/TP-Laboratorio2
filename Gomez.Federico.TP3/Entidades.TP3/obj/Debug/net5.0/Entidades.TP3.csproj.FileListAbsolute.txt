@@ -1,0 +1,12 @@
+C:\Users\Santiago\source\repos\Gomez.Federico.TP3\Entidades.TP3\bin\Debug\net5.0\Entidades.TP3.deps.json
+C:\Users\Santiago\source\repos\Gomez.Federico.TP3\Entidades.TP3\bin\Debug\net5.0\Entidades.TP3.dll
+C:\Users\Santiago\source\repos\Gomez.Federico.TP3\Entidades.TP3\bin\Debug\net5.0\ref\Entidades.TP3.dll
+C:\Users\Santiago\source\repos\Gomez.Federico.TP3\Entidades.TP3\bin\Debug\net5.0\Entidades.TP3.pdb
+C:\Users\Santiago\source\repos\Gomez.Federico.TP3\Entidades.TP3\obj\Debug\net5.0\Entidades.TP3.csproj.AssemblyReference.cache
+C:\Users\Santiago\source\repos\Gomez.Federico.TP3\Entidades.TP3\obj\Debug\net5.0\Entidades.TP3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Santiago\source\repos\Gomez.Federico.TP3\Entidades.TP3\obj\Debug\net5.0\Entidades.TP3.AssemblyInfoInputs.cache
+C:\Users\Santiago\source\repos\Gomez.Federico.TP3\Entidades.TP3\obj\Debug\net5.0\Entidades.TP3.AssemblyInfo.cs
+C:\Users\Santiago\source\repos\Gomez.Federico.TP3\Entidades.TP3\obj\Debug\net5.0\Entidades.TP3.csproj.CoreCompileInputs.cache
+C:\Users\Santiago\source\repos\Gomez.Federico.TP3\Entidades.TP3\obj\Debug\net5.0\Entidades.TP3.dll
+C:\Users\Santiago\source\repos\Gomez.Federico.TP3\Entidades.TP3\obj\Debug\net5.0\ref\Entidades.TP3.dll
+C:\Users\Santiago\source\repos\Gomez.Federico.TP3\Entidades.TP3\obj\Debug\net5.0\Entidades.TP3.pdb
